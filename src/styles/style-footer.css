@@ -1,0 +1,17 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: max(50px,7.975vh);
+    margin: 0;
+    bottom: 0;
+    color: var(--cor-sombra-clara);
+    background-color: var(--cor-sombra-escura);
+}
+footer p{
+    font-size: 0.875em;
+    text-align: center; 
+    margin: 0;
+}
