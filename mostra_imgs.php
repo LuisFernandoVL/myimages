@@ -41,22 +41,26 @@
     <link rel="stylesheet" href="src/styles/style-navbar.css">
     <link rel="stylesheet" href="src/styles/style-forms.css">
     <link rel="stylesheet" href="src/styles/style-footer.css">
-    <title>[Site]</title>
+    <title>MyImages</title>
 </head>
 <body>
     <nav>
-        <a href="inicio.php"><div class="logo">
-            
-        </div></a>
+        <a href="inicio.php">
+            <div class="logo"></div>
+        </a>
         <form class="areadepesquisa" action="inicio.php" method="post">
-            <input type="text" name="pesquisa" tabindex="1">
-            <input type="submit" name="btnpesquisa" tabindex="2">
+            <input type="text" name="pesquisa" tabindex="1" autocomplete="off">
+            <input type="submit" name="btnpesquisa" tabindex="2" value=".">
         </form>
         <div class="btnsopcoes">
-            <a href="inicio.php"><div class="icones" tabindex="3"></div></a>
-            <a href="form_cadastro_imgs.php"><div class="icones" tabindex="4"></div></a>
+            <a href="inicio.php">
+                <div class="icones inicio"tabindex="3" style="background-color:var(--cor-sombra-escura); border-radius:20%"></div>
+            </a>
+            <a href="form_cadastro_imgs.php">
+                <div class="icones addimg" tabindex="4"></div>
+            </a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">D</button>
+                <button onclick="myFunction()" class="dropbtn"></button>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="form_infosp.php">Perfil</a>
                     <a href="src/php/logout.php">Logout</a>
@@ -111,8 +115,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="buttons" style="justify-content: center;">
-                    <a href="<?php echo $imagem?>" download="<?php echo $imagem_nome?>" type="image/jpg"><p>Download</p></a>
+                <div class="buttons_mostra">
+                    <a href="src/php/excluir_imgs.php?id_img=<?php echo $id_imagem?>" tabindex="8">
+                        <div class="botao" tabindex=""><p>Excluir</p></div>
+                    </a>                
+                    <a href="<?php echo $imagem?>" download="<?php echo $imagem_nome?>" type="image/jpg">
+                        <div class="botao" tabindex=""><p>Download</p></div>
+                    </a>
                 </div>
             </div>
         </div>

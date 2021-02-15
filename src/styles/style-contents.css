@@ -26,13 +26,15 @@ section{
     align-items: center;
     width: max(280px, 21.133vw); 
     height: max(250px, 39.555vh); 
-    /*background-color: var(--cor-principal);*/
+    background-color: #121012;
     border: 1px solid var(--cor-principal);
 }
 .imgsposts .imgresponsive{
     width: 100%;
     height: max(250px, 39.555vh);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 .detalhesposts{
     width: max(280px, 21.133vw); 
@@ -45,6 +47,7 @@ section{
     display: flex; 
     justify-content: center; 
     margin: 0;
+    font-size: 1.25em;
 }
 .detalhesposts p{
     text-align: left; 

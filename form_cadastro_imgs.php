@@ -23,22 +23,26 @@
     <link rel="stylesheet" href="src/styles/style-navbar.css">
     <link rel="stylesheet" href="src/styles/style-forms.css">
     <link rel="stylesheet" href="src/styles/style-footer.css">
-    <title>[Site]</title>
+    <title>MyImages</title>
 </head>
 <body>
     <nav>
-        <a href="inicio.php"><div class="logo">
-            
-        </div></a>
+        <a href="inicio.php">
+            <div class="logo"></div>
+        </a>
         <form class="areadepesquisa" action="inicio.php" method="post">
-            <input type="text" name="pesquisa" tabindex="1">
-            <input type="submit" name="btnpesquisa" tabindex="2">
+            <input type="text" name="pesquisa" tabindex="1" autocomplete="off">
+            <input type="submit" name="btnpesquisa" tabindex="2" value=".">
         </form>
         <div class="btnsopcoes">
-            <a href="inicio.php"><div class="icones" tabindex="3"></div></a>
-            <a href="form_cadastro_imgs.php"><div class="icones" tabindex="4"></div></a>
+            <a href="inicio.php">
+                <div class="icones inicio"tabindex="3"></div>
+            </a>
+            <a href="form_cadastro_imgs.php">
+                <div class="icones addimg" tabindex="4" style="background-color:var(--cor-sombra-escura); border-radius:20%"></div>
+            </a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">D</button>
+                <button onclick="myFunction()" class="dropbtn"></button>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="form_infosp.php">Perfil</a>
                     <a href="src/php/logout.php">Logout</a>
@@ -52,13 +56,13 @@
                 <div class="inserts">
                     <div class="dados">
                         <p><strong>Título:</strong></p>
-                        <input type="text" name="titulo" tabindex="8" required autofocus>
+                        <input type="text" name="titulo" tabindex="8" required autofocus autocomplete="off">
                     </div>
                     <div class="dados">
                         <p><strong>Descrição:</strong></p>
                         <textarea name="descricao" cols="30" rows="5" tabindex="9"></textarea>
                         <div style="display: flex;justify-content: center;">
-                            <input type="file" name="arquivo" id="arquivo" tabindex="10">
+                            <input type="file" name="arquivo" id="arquivo" tabindex="10" autocomplete="off">
                         </div>
                     </div>
                 </div>

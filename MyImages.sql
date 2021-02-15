@@ -4,7 +4,7 @@ MINVALUE 1
 MAXVALUE 9223372036854775807
 CACHE 1;
    
- CREATE TABLE usuario(
+CREATE TABLE usuario(
       id_usuario 		INT8 NOT NULL DEFAULT NEXTVAL('usuario_id_usuario_seq'),   -- campo identity  autoincremento
       apelido			VARCHAR(32) NOT NULL,
       nome			VARCHAR(48) NOT NULL,
@@ -19,7 +19,7 @@ MINVALUE 1
 MAXVALUE 9223372036854775807
 CACHE 1;
    
- CREATE TABLE imagem(
+CREATE TABLE imagem(
       id_imagem 		INT8 NOT NULL DEFAULT NEXTVAL('imagem_id_imagem_seq'),
       id_usuario	 	INT8 NOT NULL,
       imagem			VARCHAR(32) NOT NULL,

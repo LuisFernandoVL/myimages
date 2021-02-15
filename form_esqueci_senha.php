@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/style-forms.css">
     <link rel="stylesheet" href="src/styles/style-footer.css">
-    <title>[Site]</title>
+    <title>MyImages</title>
 </head>
 <body>
     <section>
@@ -17,7 +17,7 @@
             <div class="inserts">
                 <div class="dados">
                     <p><strong>E-mail:</strong></p>
-                    <input type="text" name="" id="" tabindex="1" required autofocus>
+                    <input type="text" name="" id="" tabindex="1" required autofocus autocomplete="off">
                 </div>
                 
             </div>

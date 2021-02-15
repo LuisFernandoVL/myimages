@@ -11,18 +11,22 @@
 </head>
 <body>
     <nav>
-        <a href="inicio.php"><div class="logo">
-            
-        </div></a>
-        <form class="areadepesquisa">            
-            <input type="text" tabindex="1">
-            <input type="submit" value="" tabindex="2">
+        <a href="inicio.php">
+            <div class="logo"></div>
+        </a>
+        <form class="areadepesquisa" action="inicio.php" method="post">
+            <input type="text" name="pesquisa" tabindex="1">
+            <input type="submit" name="btnpesquisa" tabindex="2" value="">
         </form>
         <div class="btnsopcoes">
-            <a href="inicio.php"><div class="icones" tabindex="3"></div></a>
-            <a href="minhas_imgs.php"><div class="icones" tabindex="4"></div></a>
+            <a href="inicio.php">
+                <div class="icones inicio"tabindex="3" style="background-color:var(--cor-sombra-escura); border-radius:20%"></div>
+            </a>
+            <a href="form_cadastro_imgs.php">
+                <div class="icones addimg" tabindex="4"></div>
+            </a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">D</button>
+                <button onclick="myFunction()" class="dropbtn"></button>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="form_infosp.php">Perfil</a>
                     <a href="src/php/logout.php">Logout</a>

@@ -23,22 +23,26 @@
     <link rel="stylesheet" href="src/styles/style-navbar.css">
     <link rel="stylesheet" href="src/styles/style-contents.css">
     <link rel="stylesheet" href="src/styles/style-footer.css">
-    <title>[Site]</title>
+    <title>MyImages</title>
 </head>
 <body>
     <nav>
-        <a href="inicio.php"><div class="logo">
-            
-        </div></a>
-        <form class="areadepesquisa" action="" method="post">
-            <input type="text" name="pesquisa" tabindex="1">
-            <input type="submit" name="btnpesquisa" tabindex="2">
+        <a href="inicio.php">
+            <div class="logo"></div>
+        </a>
+        <form action="inicio.php" method="POST" class="areadepesquisa">
+            <input type="text" name="pesquisa" id="pesquisa" tabindex="1" autocomplete="off">
+            <input type="submit" name="btnpesquisa" id="btnpesquisa" tabindex="2" value=".">
         </form>
         <div class="btnsopcoes">
-            <a href="inicio.php"><div class="icones" tabindex="3"></div></a>
-            <a href="form_cadastro_imgs.php"><div class="icones" tabindex="4"></div></a>
+            <a href="inicio.php">
+                <div class="icones inicio"tabindex="3" style="background-color:var(--cor-sombra-escura); border-radius:20%"></div>
+            </a>
+            <a href="form_cadastro_imgs.php">
+                <div class="icones addimg" tabindex="4"></div>
+            </a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">D</button>
+                <button onclick="myFunction()" class="dropbtn"></button>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="form_infosp.php">Perfil</a>
                     <a href="src/php/logout.php">Logout</a>
@@ -48,10 +52,10 @@
     </nav>
     <section>
         <?php
-            include_once('src/php/conectar_bd.php');
-            $btnpesquisa=filter_input(INPUT_POST, 'btnpesquisa', FILTER_SANITIZE_STRING);
+            include_once("src/php/conectar_bd.php");
+            $btnpesquisa=filter_input(INPUT_POST, 'btnpesquisa', FILTER_SANITIZE_SPECIAL_CHARS);
             if($btnpesquisa){
-                $pesquisa = filter_input(INPUT_POST, 'pesquisa', FILTER_SANITIZE_STRING);
+                $pesquisa = filter_input(INPUT_POST, "pesquisa", FILTER_SANITIZE_STRING);
                 $sql = "select * from imagem where autor='$apelido' and titulo like '%$pesquisa%' or descricao like '%$pesquisa%' or autor like '%$pesquisa%' order by id_imagem";
             }
             else{
@@ -72,7 +76,7 @@
                     <div class=".'posts'.">
                         <a href=".'mostra_imgs.php?id_img='.$id_imagem.''."><div class=".'imgsposts'.">
                             <div class=".'imgresponsive'." 
-                            style=".'background-image:url('."$imagem".') no-repeat center center;'."></div>
+                            style=".'background-image:url('."$imagem".');'."></div>
                         </div>
                         <div class=".'detalhesposts'.">
                             <h2>".$titulo."</h2>
@@ -86,7 +90,7 @@
             }
             else{
                 echo "
-                    <h2>Não há nada aqui por enquanto ;-; ... Experimente cadastrar imagens</h2>
+                    <h2>Não há nada aqui por enquanto :( ... Experimente cadastrar alguma imagem -> <a href=".'form_cadastro_imgs.php'.">Cadastrar<a></h2>
                 ";
             }
             
